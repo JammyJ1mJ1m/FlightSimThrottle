@@ -41,10 +41,6 @@ void setup()
   isDebugEnabled = false;
 }
 
-//0.9999981
-
-
-
 void readParkingPacket()
 {
   String input = "@";
@@ -74,48 +70,32 @@ void readParkingPacket()
       }
     }
     
-  
-  if (input == ("@320/") && index == "0" )
+    if (input == ("@320/") && index == "0" )
     {
-      //value = readBetweenValues(floatVal, 0.9, 1);
-      if (value >= 0.9)
-        {
-          analogWrite(11, brightness);
-        }
-      if (value == 0)
-        {
-          analogWrite(11, 0);
-        }
-
-      //setLight(value,11, 0, 0.9); 
+      controlAnalogLED(value, 0.9f, 11);
     }
-    
     
     if (input == ("@320/") && index == "1" )
     {
-      if (value >= 0.9)
-        {
-          analogWrite(10, brightness);
-        }
-      if (value == 0)
-        {
-          analogWrite(10, 0);
-        }
+      controlAnalogLED(value, 0.9f, 10);
     }
-
 
     if (input == ("@320/") && index == "2" )
     {
-      if (value >= 0.9)
-        {
-          analogWrite(9, brightness);
-        }
-      if (value == 0)
-        {
-          analogWrite(9, 0);
-        }
+      controlAnalogLED(value, 0.9f, 9);
     }
-   
+  }
+}
+
+void controlAnalogLED(float pValue, float pLimit, int pPin)
+{
+  if (pValue >= pLimit)
+  {
+    analogWrite(pPin, brightness);
+  }
+  if (pValue == 0)
+  {
+    analogWrite(pPin, 0);
   }
 }
 
@@ -162,9 +142,7 @@ void setThrottlePercentage( int pPin)
 {
   int value = analogRead(pPin);
   value = clampValue(value);
-  Joystick.setThrottle( value);
-  //Serial.println(value);
-  //delay(100);
+  Joystick.setThrottle( value);  
 }
 
 void setAcceleratorPercentage( int pPin)
@@ -176,11 +154,10 @@ void setAcceleratorPercentage( int pPin)
 
 int readPotValue(int pPin)
 {
-  return analogRead(pPin);
-  
+  return analogRead(pPin); 
 }
 
-void setRZAxis(int pPot)
+void setSteeringAxis(int pPot)
 {
   Joystick.setSteering(readPotValue(pPot)); 
 }
@@ -197,6 +174,6 @@ void loop()
   brightness = setBrightnessLevel(brightnessPot);
   setThrottlePercentage(potPinLeft);
   setAcceleratorPercentage(potPinRight);
-  setRZAxis(brightnessPot);
+  setSteeringAxis(brightnessPot);
   readParkingPacket();
 }
