@@ -1,7 +1,8 @@
 # FlightSimThrottle
 
 _____________________________________
-Thingiverse files: https://www.thingiverse.com/thing:5440863 <br/>
+Thingiverse joystick files: https://www.thingiverse.com/thing:5440863 <br/>
+Thingiverse light panel files: https://www.thingiverse.com/thing:5449724
 Video preview of basic throttle: https://www.youtube.com/shorts/Dck7o5My2vg <br/>
 
 To use either the basic throttle control or the control with extras you will need to download the joystick library: https://github.com/MHeironimus/ArduinoJoystickLibrary <br/>
