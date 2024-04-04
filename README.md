@@ -2,15 +2,15 @@
 
 _____________________________________
 Thingiverse joystick files: https://www.thingiverse.com/thing:5440863 <br/>
-Thingiverse light panel files: https://www.thingiverse.com/thing:5449724
+Thingiverse light panel files: https://www.thingiverse.com/thing:5449724 <br/>
 Video preview of basic throttle: https://www.youtube.com/shorts/Dck7o5My2vg <br/>
 
 To use either the basic throttle control or the control with extras you will need to download the joystick library: https://github.com/MHeironimus/ArduinoJoystickLibrary <br/>
-Once downloaded you will need to drag the zip into the correct file. In the arduino IDE select sketch > include library > add .ZIP library. from there select the zipped Joystick library. <br/>
+Once downloaded you will need to drag the zip into the correct file. In the Arduino IDE select sketch > include library > add .ZIP library. from there select the zipped Joystick library. <br/>
 <br/>
 You will also need to install my easySwitch library, this is installed in the same way the joystick library is installed, it can be found here: https://github.com/JammyJ1mJ1m/easySwitch <br/>
 <br/>
-NOTE: to use this project and the joystick library you will need a compatible arduino board, an in depth list of compatible boards can be found on the joystick library github page. I am using an official arduino micro.
+NOTE: to use this project and the joystick library you will need a compatible Arduino board, an in depth list of compatible boards can be found on the joystick library GitHub page. I am using an official Arduino micro.
 ![add library](https://user-images.githubusercontent.com/52784821/181112569-012a6443-702c-403d-8ca1-a49eeda75db4.png)
 
 _____________________________________
@@ -20,7 +20,7 @@ The Arduino schematic for the basic throttle control can be seen below.
 
 _____________________________________
 The Arduino schematic for the throttle control extras can be seen below.<br/>
-This includes the orginal throttle control aswell as a parking brake indicator light, landing gear indicator lights and a dimmer to control the brightness of the gear indicator lights.
+This includes the original throttle control as well as a parking brake indicator light, landing gear indicator lights and a dimmer to control the brightness of the gear indicator lights.
 
 ![circuit2](https://user-images.githubusercontent.com/52784821/181107426-8869a6a9-5150-49f3-a255-911e778de55f.png)
 
